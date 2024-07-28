@@ -6,6 +6,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-size: 16px; /* Base font size */
+}
+
+html {
+    font-size: 100%; /* 1rem = 16px */
 }
 
 .page-container {
@@ -19,6 +24,7 @@ header {
     color: #fff;
     padding: 1em 0;
     text-align: center;
+    font-size: 2rem; /* Responsive header font size */
 }
 
 .seminar-overview {
@@ -34,6 +40,7 @@ header {
     margin: 10px 0;
     color: #000;
     text-align: justify;
+    font-size: 1.25rem; /* Responsive overview font size */
 }
 
 .register-link {
@@ -44,6 +51,7 @@ header {
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
+    font-size: 1.25rem; /* Responsive register link font size */
 }
 
 .register-link:hover {
@@ -69,17 +77,19 @@ header {
 .seminar h3 {
     margin-top: 0;
     color: #333;
+    font-size: 1.75rem; /* Responsive seminar title font size */
 }
 
 .seminar p {
     margin: 5px 0;
     color: #555;
     text-align: justify;
+    font-size: 1.25rem; /* Responsive seminar paragraph font size */
 }
 
 .logo {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px; /* Increase max-width of logo */
     display: block;
     margin: 0 auto 20px auto;
 }
@@ -92,6 +102,19 @@ footer {
     width: 100%;
     box-sizing: border-box;
     margin-top: auto;
+    font-size: 1.25rem; /* Responsive footer font size */
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 90%; /* 1rem = 14.4px */
+    }
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 80%; /* 1rem = 12.8px */
+    }
 }
 
 @media (max-width: 768px) {
@@ -110,11 +133,15 @@ footer {
     }
 
     .logo {
-        max-width: 300px;
+        max-width: 500px; /* Adjust for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
+    html {
+        font-size: 70%; /* 1rem = 11.2px */
+    }
+
     .seminar-overview {
         margin: 0.25em;
         padding: 0.25em;
@@ -130,6 +157,6 @@ footer {
     }
 
     .logo {
-        max-width: 200px;
+        max-width: 300px; /* Adjust for smaller screens */
     }
 }
