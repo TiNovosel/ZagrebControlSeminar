@@ -3,6 +3,15 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 header {
@@ -22,8 +31,8 @@ header {
 }
 
 .seminar-overview p {
-    margin: 10px 10;
-    color: #000000;
+    margin: 10px 0;
+    color: #000;
     text-align: justify;
 }
 
@@ -57,10 +66,22 @@ header {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .seminar h3 {
     margin-top: 0;
+    color: #333;
+}
+
+.seminar p {
+    margin: 5px 0;
+    color: #555;
+    text-align: justify;
+}
+
+.logo {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto 20px auto;
 }
 
 footer {
@@ -68,8 +89,47 @@ footer {
     padding: 10px 0;
     background-color: #333;
     color: #fff;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .seminar-overview {
+        margin: 0.5em;
+        padding: 0.5em;
+    }
+
+    .seminar-schedule {
+        margin: 0.5em;
+        padding: 0.5em;
+    }
+
+    .seminar {
+        padding: 0.5em;
+    }
+
+    .logo {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .seminar-overview {
+        margin: 0.25em;
+        padding: 0.25em;
+    }
+
+    .seminar-schedule {
+        margin: 0.25em;
+        padding: 0.25em;
+    }
+
+    .seminar {
+        padding: 0.25em;
+    }
+
+    .logo {
+        max-width: 200px;
+    }
 }
